@@ -24,3 +24,5 @@ Dir.mkdir('lib')
 Dir.mkdir('spec')
 
 system('bundle install')
+
+system('rspec --init')
