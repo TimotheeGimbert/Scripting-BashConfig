@@ -1,9 +1,8 @@
 require 'launchy'
 
-def check_if_user_gave_input
-  abort("mkdir: missing input") if ARGV.empty?
+def check_input
+  abort("type your question dude !") if ARGV.empty?
 end
- 
 
 def get_url_from_ARGV(argv_array)
   search_str = argv_array.join('+')
@@ -12,7 +11,7 @@ def get_url_from_ARGV(argv_array)
 end
 
 def perform
-  check_if_user_gave_input
+  check_input
   url = get_url_from_ARGV(ARGV)
   Launchy.open(url)
 end
